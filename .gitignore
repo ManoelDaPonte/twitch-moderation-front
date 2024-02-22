@@ -1,0 +1,29 @@
+# Ignore Next.js build output
+/.next/
+
+# Ignore development server log files
+/.npm/
+/.yarn/
+
+# Ignore environment variables file
+.env
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore dependencies
+/node_modules/
+
+# Ignore build artifacts
+/out/
+
+# Ignore IDE/Editor specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore temporary files
+*.log
+*.tmp
