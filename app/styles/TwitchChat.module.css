@@ -1,0 +1,31 @@
+.chatContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 20vw;
+    height: 90vh;
+    border: 1px solid rgb(81, 81, 81);
+    background-color: #222222;
+    overflow-y: auto; /* Automatically hide scrollbar when not needed */
+    scrollbar-width: thin; /* width of scrollbar */
+    scrollbar-color: rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.1); /* color of scrollbar */
+}
+
+.chatMessage {
+    display: flex;
+    margin: 10px;
+}
+
+.userName {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.point {
+    margin: 0px 5px;
+}
+
+.message {
+    flex: 1; /* take remaining space */
+    color: white; /* default message color */
+}
