@@ -25,6 +25,4 @@ export default function QueryData({ userInput, setGraphDataModeration }) {
             staleTime: Infinity,
         }
     );
-
-    return null;
 }

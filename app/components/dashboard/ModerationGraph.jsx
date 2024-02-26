@@ -1,5 +1,8 @@
 import React from "react";
-import Plot from "react-plotly.js";
+import dynamic from "next/dynamic";
+
+// Dynamically import the Plot component from react-plotly.js with SSR disabled
+const Plot = dynamic(() => import("react-plotly.js"), { ssr: false });
 
 const Graph = ({ graphDataModeration }) => {
     // Initialize dictionaries to store accumulated scores and flagged status for each category

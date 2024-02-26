@@ -1,7 +1,7 @@
 "use client";
 import styles from "@/styles/page.module.css";
 import TwitchChat from "@/components/TwitchChat";
-import QueryData from "@/api/QueryData";
+import QueryData from "@/api/QueryDataModeration";
 import DashBoard from "@/components/DashBoard";
 import React, { useState } from "react";
 

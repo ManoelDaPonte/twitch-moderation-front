@@ -1,12 +1,6 @@
 import React from "react";
-import Plot from "react-plotly.js";
-
 const Topics = () => {
-    return (
-        <div>
-            <Plot data={[]} layout={{}} config={{}} />
-        </div>
-    );
+    return <div>test</div>;
 };
 
 export default Topics;

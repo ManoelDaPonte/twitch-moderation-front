@@ -1,22 +1,21 @@
 import { Client } from "tmi.js";
 import { useEffect, useState } from "react";
+import { useTextToSpeech } from "@/api/TextToSpeech";
 import styles from "@/styles/twitchChat.module.css";
 
-function TwitchChat({ setUserInput, channelName = "v4ssler" }) {
-    // Default value is "v4ssler"
+function TwitchChat({ channelName = "v4ssler" }) {
     const [messages, setMessages] = useState([]);
+    const { playAudioFromText, isLoading, error } = useTextToSpeech();
 
     useEffect(() => {
         const client = new Client({
-            channels: [channelName], // Use the channelName variable
+            channels: [channelName],
         });
 
         client.connect();
 
         client.on("message", (channel, tags, message, self) => {
-            // Ignore messages sent by the bot itself
             if (!self) {
-                setUserInput({ message });
                 setMessages((prevMessages) => [
                     ...prevMessages,
                     { displayName: tags["display-name"], message },
@@ -27,17 +26,20 @@ function TwitchChat({ setUserInput, channelName = "v4ssler" }) {
         return () => {
             client.disconnect();
         };
-    }, [channelName]); // Add channelName as a dependency to useEffect
+    }, [channelName]);
 
     return (
         <div className={styles.chatContainer}>
-            <div className={styles.header}>{channelName}.tv</div>{" "}
-            {/* Display the channel name */}
+            <div className={styles.header}>{channelName}.tv</div>
             <div className={styles.chat}>
                 {messages.map((msg, index) => (
-                    <div key={index} className={styles.chatMessage}>
+                    <div
+                        key={index}
+                        className={styles.chatMessage}
+                        onClick={() => playAudioFromText(msg.message)}
+                    >
                         <div className={styles.userName}>{msg.displayName}</div>
-                        <div className={styles.point}> : </div>
+                        <div className={styles.point}>:</div>
                         <div className={styles.message}>{msg.message}</div>
                     </div>
                 ))}
