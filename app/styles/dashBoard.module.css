@@ -1,0 +1,47 @@
+.dashBoardContainer {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    background-color: #222222;
+    border: 1px solid rgb(80, 80, 80);
+    margin-left: 20px;
+    margin-right: 20px; /* Adds a 20px margin to the right */
+    width: calc(
+        100% - 40px
+    ); /* Adjusts the width to account for the left and right margins */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #333333;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent; /* Ensures the layout doesn't shift when border is added */
+}
+
+.tab:hover,
+.tab.active {
+    border-bottom: 3px solid blueviolet; /* Purple border for hover and active states */
+}
+
+/* Optional: If you want a different color when the tab is both active and hovered */
+.tab.active:hover {
+    border-bottom-color: blueviolet; /* Lighter or different shade of purple */
+}
+
+.moderation {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: auto; /* Allows content to properly scroll if it overflows */
+}

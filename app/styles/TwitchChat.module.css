@@ -4,8 +4,22 @@
     margin-left: 20px;
     width: 20vw;
     height: 90vh;
-    border: 1px solid rgb(81, 81, 81);
+    border: 1px solid rgb(80, 80, 80);
     background-color: #222222;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.chat {
     overflow-y: auto; /* Automatically hide scrollbar when not needed */
     scrollbar-width: thin; /* width of scrollbar */
     scrollbar-color: rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.1); /* color of scrollbar */

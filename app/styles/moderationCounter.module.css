@@ -1,0 +1,27 @@
+/* ModerationCounter.module.css */
+.counterContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.counterItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.point {
+    height: 14px; /* Increased size */
+    width: 14px; /* Increased size */
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.redPoint {
+    background-color: red;
+}
+
+.greenPoint {
+    background-color: green;
+}
