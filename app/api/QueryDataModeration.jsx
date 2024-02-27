@@ -1,28 +1,14 @@
-import { useQuery } from "react-query";
+export const fetchDataModeration = async (userInput) => {
+    if (!userInput?.message) {
+        // Early return or throw an error if userInput.message is not valid
+        throw new Error("userInput.message is required");
+    }
 
-const fetchDataModeration = async (userInput) => {
     const response = await fetch(
         `http://127.0.0.1:8000/moderation/${userInput.message}`
     );
+    if (!response.ok) {
+        throw new Error("Network response was not ok");
+    }
     return response.json();
 };
-
-export default function QueryData({ userInput, setGraphDataModeration }) {
-    const { data, isLoading: isLoadingModeration } = useQuery(
-        ["moderation", userInput],
-        () => userInput && fetchDataModeration(userInput),
-        {
-            onSuccess: (data) => {
-                if (data !== null) {
-                    setGraphDataModeration((prevData) => [...prevData, data]);
-                }
-            },
-            onError: (error) => {
-                console.error("Error fetching moderation data:", error);
-            },
-
-            // Set staleTime to Infinity to prevent refetching when the component re-mounts
-            staleTime: Infinity,
-        }
-    );
-}

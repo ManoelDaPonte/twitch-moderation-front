@@ -1,10 +1,12 @@
 import { Client } from "tmi.js";
 import { useEffect, useState } from "react";
-import { useTextToSpeech } from "@/api/TextToSpeech";
+import { useTextToSpeech } from "@/api/QueryTextToSpeech";
 import styles from "@/styles/twitchChat.module.css";
 
-function TwitchChat({ channelName = "v4ssler" }) {
-    const [messages, setMessages] = useState([]);
+function TwitchChat({ channelName, messagesState, lastMessageState }) {
+    const [messages, setMessages] = messagesState;
+    const [lastMessage, setLastMessage] = lastMessageState;
+
     const { playAudioFromText, isLoading, error } = useTextToSpeech();
 
     useEffect(() => {
@@ -16,10 +18,12 @@ function TwitchChat({ channelName = "v4ssler" }) {
 
         client.on("message", (channel, tags, message, self) => {
             if (!self) {
-                setMessages((prevMessages) => [
-                    ...prevMessages,
-                    { displayName: tags["display-name"], message },
-                ]);
+                const newMessage = {
+                    displayName: tags["display-name"],
+                    message,
+                };
+                setMessages((prevMessages) => [...prevMessages, newMessage]);
+                setLastMessage(newMessage);
             }
         });
 

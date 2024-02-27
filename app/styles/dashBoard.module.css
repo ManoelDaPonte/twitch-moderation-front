@@ -36,12 +36,16 @@
     border-bottom-color: blueviolet; /* Lighter or different shade of purple */
 }
 
+.wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
 .moderation {
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    overflow: auto; /* Allows content to properly scroll if it overflows */
+    width: 70%;
 }

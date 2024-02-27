@@ -1,0 +1,18 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between; /* Keeps Topics and Questions apart */
+    align-items: center; /* Centers them vertically */
+    text-align: center; /* Centers the text inside the child components */
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper > div {
+    flex: 1; /* Each child takes equal width */
+    display: flex;
+    flex-direction: column; /* Aligns child content vertically */
+    justify-content: center; /* Centers content vertically in each child */
+    align-items: center; /* Centers content horizontally in each child */
+    height: 100%; /* Ensures they take the full height of the parent */
+    width: 100%;
+}

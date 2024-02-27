@@ -1,22 +1,25 @@
 "use client";
 import styles from "@/styles/page.module.css";
 import TwitchChat from "@/components/TwitchChat";
-import QueryData from "@/api/QueryDataModeration";
-import DashBoard from "@/components/DashBoard";
+import DashBoard from "@/components/dashboard/DashBoard";
 import React, { useState } from "react";
 
 export default function Page() {
-    const [userInput, setUserInput] = useState(null);
-    const [graphDataModeration, setGraphDataModeration] = useState([]);
+    const [lastMessage, setLastMesage] = useState(null);
+    const [messages, setMessages] = useState([]);
 
     return (
         <div className={styles.container}>
-            <TwitchChat setUserInput={setUserInput} channelName={"v4ssler"} />
-            <QueryData
-                userInput={userInput}
-                setGraphDataModeration={setGraphDataModeration}
+            <TwitchChat
+                channelName={"shisheyu_mayamoto"}
+                messagesState={[messages, setMessages]}
+                lastMessageState={[lastMessage, setLastMesage]}
             />
-            <DashBoard graphDataModeration={graphDataModeration} />
+
+            <DashBoard
+                messagesState={[messages, setMessages]}
+                lastMessageState={[lastMessage, setLastMesage]}
+            />
         </div>
     );
 }

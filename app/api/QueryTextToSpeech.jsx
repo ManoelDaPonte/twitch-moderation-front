@@ -13,7 +13,8 @@ export const useTextToSpeech = () => {
             const options = {
                 method: "POST",
                 headers: {
-                    "xi-api-key": "7b56dd225a43bb232983296bb0f50239",
+                    "xi-api-key": process.env.NEXT_PUBLIC_ELEVEN_API_KEY,
+
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
@@ -23,7 +24,7 @@ export const useTextToSpeech = () => {
             };
 
             const response = await fetch(
-                "https://api.elevenlabs.io/v1/text-to-speech/h35PbKYYARf74PkVJ4bu",
+                `https://api.elevenlabs.io/v1/text-to-speech/${process.env.NEXT_PUBLIC_ELEVEN_ENDPOINT}`,
                 options
             );
             if (!response.ok) throw new Error("Failed to fetch TTS data");
