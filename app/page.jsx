@@ -11,7 +11,7 @@ export default function Page() {
     return (
         <div className={styles.container}>
             <TwitchChat
-                channelName={"shisheyu_mayamoto"}
+                channelName={"flomoka"}
                 messagesState={[messages, setMessages]}
                 lastMessageState={[lastMessage, setLastMesage]}
             />
