@@ -6,7 +6,7 @@
 /.yarn/
 
 # Ignore environment variables file
-.env
+.env*
 
 # Ignore OS-specific files
 .DS_Store
