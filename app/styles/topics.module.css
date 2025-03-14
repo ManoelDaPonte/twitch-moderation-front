@@ -5,7 +5,6 @@
 	margin-top: 20px;
 	width: 99%;
 	height: 100%;
-	overflow-x: auto;
 }
 
 .topicsHeader {
@@ -37,14 +36,14 @@
 }
 
 .topic {
-	margin-bottom: 5px;
+	margin-bottom: 5px; /* Space between topics */
 }
 
 .button {
 	cursor: pointer;
 	padding: 10px 20px;
 	margin-top: 20px;
-	background-color: #9147ff;
+	background-color: #9147ff; /* Twitch purple */
 	color: white;
 	border: none;
 	border-radius: 5px;
@@ -54,7 +53,7 @@
 }
 
 .button:hover {
-	background-color: #772ce8;
+	background-color: #772ce8; /* Darker Twitch purple */
 }
 
 .button.disabled {
@@ -108,8 +107,6 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-	padding: 0 10px;
 }
 
 @keyframes blink {
@@ -126,47 +123,4 @@
 
 .button.loading {
 	animation: blink 1.5s infinite;
-}
-
-/* Tablette */
-@media (max-width: 1024px) {
-	.topicsContainer {
-		width: 100%;
-	}
-
-	.button {
-		width: 80%;
-		max-width: 300px;
-	}
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-	.topicsHeader,
-	.topicRow {
-		padding: 8px;
-	}
-
-	.button {
-		padding: 8px 15px;
-		font-size: 14px;
-	}
-
-	.tooltipText {
-		width: 150px;
-		margin-left: -75px;
-		font-size: 11px;
-	}
-}
-
-/* Très petit écran */
-@media (max-width: 480px) {
-	.headerTheme,
-	.headerTopics {
-		font-size: 13px;
-	}
-
-	.topic {
-		font-size: 12px;
-	}
 }

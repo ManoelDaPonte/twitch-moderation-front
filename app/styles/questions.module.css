@@ -1,4 +1,4 @@
-/* Questions.css */
+/* Topics.css */
 .topicsContainer {
 	display: flex;
 	flex-direction: column;
@@ -42,63 +42,15 @@
 	cursor: pointer;
 	padding: 10px 20px;
 	margin-top: 20px;
-	background-color: #9147ff; /* Twitch purple */
+	background-color: #007bff;
 	color: white;
 	border: none;
 	border-radius: 5px;
 	font-size: 16px;
-	transition: all 0.2s ease;
-	position: relative;
 }
 
 .button:hover {
-	background-color: #772ce8; /* Darker Twitch purple */
-}
-
-.button.disabled {
-	cursor: not-allowed;
-	background-color: #666;
-	opacity: 0.6;
-	color: #ddd;
-}
-
-.button.loading {
-	background-color: #555;
-	cursor: wait;
-}
-
-.tooltipText {
-	visibility: hidden;
-	width: 180px;
-	background-color: #333;
-	color: #fff;
-	text-align: center;
-	border-radius: 4px;
-	padding: 5px;
-	position: absolute;
-	z-index: 1;
-	bottom: 125%;
-	left: 50%;
-	margin-left: -90px;
-	opacity: 0;
-	transition: opacity 0.3s;
-	font-size: 12px;
-}
-
-.tooltipText::after {
-	content: "";
-	position: absolute;
-	top: 100%;
-	left: 50%;
-	margin-left: -5px;
-	border-width: 5px;
-	border-style: solid;
-	border-color: #333 transparent transparent transparent;
-}
-
-.button.disabled:hover .tooltipText {
-	visibility: visible;
-	opacity: 1;
+	background-color: #0056b3;
 }
 
 .wrapper {
@@ -106,20 +58,4 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-}
-
-@keyframes blink {
-	0% {
-		opacity: 0.5;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0.5;
-	}
-}
-
-.button.loading {
-	animation: blink 1.5s infinite;
 }

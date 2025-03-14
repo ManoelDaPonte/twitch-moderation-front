@@ -17,7 +17,7 @@
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
-	background-color: rgba(145, 71, 255, 0.15);
+	background-color: rgba(145, 71, 255, 0.15); /* Light Twitch purple */
 	margin-bottom: 24px;
 }
 
@@ -58,17 +58,17 @@
 }
 
 .bulletPoint {
-	color: #9147ff;
+	color: #9147ff; /* Twitch purple */
 	font-size: 20px;
 	margin-right: 8px;
 }
 
 .waitingMessage {
 	padding: 12px 20px;
-	background-color: rgba(145, 71, 255, 0.1);
+	background-color: rgba(145, 71, 255, 0.1); /* Very light Twitch purple */
 	border-radius: 40px;
 	font-size: 14px;
-	color: #9147ff;
+	color: #9147ff; /* Twitch purple */
 	font-weight: medium;
 	animation: pulse 2s infinite;
 }
@@ -82,94 +82,5 @@
 	}
 	100% {
 		opacity: 0.6;
-	}
-}
-
-/* Tablette */
-@media (max-width: 1024px) {
-	.emptyStateContainer {
-		padding: 30px 15px;
-	}
-
-	.iconContainer {
-		width: 70px;
-		height: 70px;
-		margin-bottom: 20px;
-	}
-
-	.icon {
-		font-size: 35px;
-	}
-
-	.title {
-		font-size: 22px;
-	}
-
-	.description {
-		font-size: 15px;
-	}
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-	.emptyStateContainer {
-		padding: 25px 15px;
-	}
-
-	.iconContainer {
-		width: 60px;
-		height: 60px;
-		margin-bottom: 18px;
-	}
-
-	.icon {
-		font-size: 30px;
-	}
-
-	.title {
-		font-size: 20px;
-		margin-bottom: 12px;
-	}
-
-	.description {
-		font-size: 14px;
-		margin-bottom: 20px;
-	}
-
-	.detailsContainer {
-		padding: 12px 18px;
-		margin-bottom: 25px;
-	}
-
-	.waitingMessage {
-		padding: 10px 16px;
-		font-size: 13px;
-	}
-}
-
-/* Très petit écran */
-@media (max-width: 480px) {
-	.emptyStateContainer {
-		padding: 20px 10px;
-	}
-
-	.title {
-		font-size: 18px;
-	}
-
-	.description {
-		font-size: 13px;
-	}
-
-	.detailsContainer {
-		padding: 10px 15px;
-	}
-
-	.bulletPoint {
-		font-size: 18px;
-	}
-
-	.detailItem {
-		font-size: 13px;
 	}
 }

@@ -5,8 +5,10 @@
 	background-color: #222222;
 	border: 1px solid rgb(80, 80, 80);
 	margin-left: 20px;
-	margin-right: 20px;
-	width: calc(100% - 40px);
+	margin-right: 20px; /* Adds a 20px margin to the right */
+	width: calc(
+		100% - 40px
+	); /* Adjusts the width to account for the left and right margins */
 }
 
 .header {
@@ -14,13 +16,6 @@
 	align-items: center;
 	justify-content: flex-start;
 	background-color: #333333;
-	overflow-x: auto;
-	scrollbar-width: none; /* Firefox */
-	-ms-overflow-style: none; /* IE and Edge */
-}
-
-.header::-webkit-scrollbar {
-	display: none; /* Chrome, Safari, Opera */
 }
 
 .tab {
@@ -28,24 +23,23 @@
 	cursor: pointer;
 	color: #fff;
 	transition: all 0.3s ease;
-	border-bottom: 3px solid transparent;
-	white-space: nowrap;
+	border-bottom: 3px solid transparent; /* Ensures the layout doesn't shift when border is added */
 }
 
 .tab:hover,
 .tab.active {
-	border-bottom: 3px solid #9147ff;
+	border-bottom: 3px solid blueviolet; /* Purple border for hover and active states */
 }
 
+/* Optional: If you want a different color when the tab is both active and hovered */
 .tab.active:hover {
-	border-bottom-color: #9147ff;
+	border-bottom-color: blueviolet; /* Lighter or different shade of purple */
 }
 
 .wrapper {
 	display: flex;
 	height: 100%;
 	width: 100%;
-	overflow: auto;
 }
 
 .moderation {
@@ -54,44 +48,4 @@
 	justify-content: center;
 	align-items: center;
 	width: 70%;
-}
-
-/* Tablette */
-@media (max-width: 1024px) {
-	.dashBoardContainer {
-		height: auto;
-		min-height: 500px;
-		flex: 1;
-		margin: 10px 20px 20px 20px;
-	}
-
-	.wrapper {
-		flex-direction: column;
-		overflow-y: auto;
-	}
-
-	.moderation {
-		width: 100%;
-		padding: 15px 0;
-	}
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-	.dashBoardContainer {
-		margin: 10px;
-	}
-
-	.tab {
-		padding: 10px 15px;
-		font-size: 14px;
-	}
-}
-
-/* Très petit écran */
-@media (max-width: 480px) {
-	.tab {
-		padding: 8px 12px;
-		font-size: 13px;
-	}
 }
