@@ -1,61 +1,125 @@
-/* Topics.css */
+/* Questions.css */
 .topicsContainer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    width: 99%;
-    height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	width: 99%;
+	height: 100%;
 }
 .topicsHeader {
-    display: flex;
-    font-weight: bold;
-    padding: 10px;
-    background-color: #464646;
+	display: flex;
+	font-weight: bold;
+	padding: 10px;
+	background-color: #464646;
 }
 
 .headerTheme,
 .headerTopics,
 .topic-theme,
 .topic-topics {
-    flex: 1;
+	flex: 1;
 }
 
 .topicRow {
-    display: flex;
-    padding: 10px;
-    border-bottom: 1px solid #e0e0e0;
+	display: flex;
+	padding: 10px;
+	border-bottom: 1px solid #e0e0e0;
 }
 
 .topicTheme {
-    flex: 1;
+	flex: 1;
 }
 
 .topicTopics {
-    flex: 1;
+	flex: 1;
 }
 
 .topic {
-    margin-bottom: 5px; /* Space between topics */
+	margin-bottom: 5px; /* Space between topics */
 }
 
 .button {
-    cursor: pointer;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
+	cursor: pointer;
+	padding: 10px 20px;
+	margin-top: 20px;
+	background-color: #9147ff; /* Twitch purple */
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	transition: all 0.2s ease;
+	position: relative;
 }
 
 .button:hover {
-    background-color: #0056b3;
+	background-color: #772ce8; /* Darker Twitch purple */
+}
+
+.button.disabled {
+	cursor: not-allowed;
+	background-color: #666;
+	opacity: 0.6;
+	color: #ddd;
+}
+
+.button.loading {
+	background-color: #555;
+	cursor: wait;
+}
+
+.tooltipText {
+	visibility: hidden;
+	width: 180px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 4px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -90px;
+	opacity: 0;
+	transition: opacity 0.3s;
+	font-size: 12px;
+}
+
+.tooltipText::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #333 transparent transparent transparent;
+}
+
+.button.disabled:hover .tooltipText {
+	visibility: visible;
+	opacity: 1;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0.5;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.5;
+	}
+}
+
+.button.loading {
+	animation: blink 1.5s infinite;
 }

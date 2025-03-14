@@ -1,0 +1,56 @@
+.errorContainer {
+	position: relative;
+	width: 80%;
+	max-width: 500px;
+	margin: 10px auto;
+	animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.errorContent {
+	display: flex;
+	align-items: center;
+	background-color: rgba(220, 53, 69, 0.15); /* Light red background */
+	border: 1px solid rgba(220, 53, 69, 0.3);
+	border-radius: 6px;
+	padding: 12px 15px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.errorIcon {
+	font-size: 18px;
+	margin-right: 12px;
+	color: #dc3545; /* Red */
+}
+
+.errorText {
+	flex: 1;
+	color: #fff;
+	font-size: 14px;
+}
+
+.dismissButton {
+	background: none;
+	border: none;
+	color: #aaa;
+	font-size: 20px;
+	cursor: pointer;
+	padding: 0 5px;
+	margin-left: 8px;
+	line-height: 1;
+	transition: color 0.2s;
+}
+
+.dismissButton:hover {
+	color: #fff;
+}

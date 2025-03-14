@@ -1,0 +1,175 @@
+.emptyStateContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 40px 20px;
+	text-align: center;
+	height: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.iconContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: rgba(145, 71, 255, 0.15);
+	margin-bottom: 24px;
+}
+
+.icon {
+	font-size: 40px;
+}
+
+.title {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 16px;
+	color: #f0f0f0;
+}
+
+.description {
+	font-size: 16px;
+	margin-bottom: 24px;
+	color: #b8b8b8;
+	line-height: 1.5;
+}
+
+.detailsContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 32px;
+	background-color: rgba(255, 255, 255, 0.05);
+	padding: 16px 24px;
+	border-radius: 8px;
+	width: 100%;
+}
+
+.detailItem {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+	text-align: left;
+}
+
+.bulletPoint {
+	color: #9147ff;
+	font-size: 20px;
+	margin-right: 8px;
+}
+
+.waitingMessage {
+	padding: 12px 20px;
+	background-color: rgba(145, 71, 255, 0.1);
+	border-radius: 40px;
+	font-size: 14px;
+	color: #9147ff;
+	font-weight: medium;
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		opacity: 0.6;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.6;
+	}
+}
+
+/* Tablette */
+@media (max-width: 1024px) {
+	.emptyStateContainer {
+		padding: 30px 15px;
+	}
+
+	.iconContainer {
+		width: 70px;
+		height: 70px;
+		margin-bottom: 20px;
+	}
+
+	.icon {
+		font-size: 35px;
+	}
+
+	.title {
+		font-size: 22px;
+	}
+
+	.description {
+		font-size: 15px;
+	}
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+	.emptyStateContainer {
+		padding: 25px 15px;
+	}
+
+	.iconContainer {
+		width: 60px;
+		height: 60px;
+		margin-bottom: 18px;
+	}
+
+	.icon {
+		font-size: 30px;
+	}
+
+	.title {
+		font-size: 20px;
+		margin-bottom: 12px;
+	}
+
+	.description {
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+
+	.detailsContainer {
+		padding: 12px 18px;
+		margin-bottom: 25px;
+	}
+
+	.waitingMessage {
+		padding: 10px 16px;
+		font-size: 13px;
+	}
+}
+
+/* Très petit écran */
+@media (max-width: 480px) {
+	.emptyStateContainer {
+		padding: 20px 10px;
+	}
+
+	.title {
+		font-size: 18px;
+	}
+
+	.description {
+		font-size: 13px;
+	}
+
+	.detailsContainer {
+		padding: 10px 15px;
+	}
+
+	.bulletPoint {
+		font-size: 18px;
+	}
+
+	.detailItem {
+		font-size: 13px;
+	}
+}

@@ -1,0 +1,123 @@
+.channelInputContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	background-color: #333333;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.channelDisplay {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	padding: 8px 12px;
+	border-radius: 4px;
+	background-color: #3a3a3a;
+	transition: background-color 0.2s;
+}
+
+.channelDisplay:hover {
+	background-color: #444444;
+}
+
+.currentChannel {
+	font-weight: bold;
+	color: #9147ff;
+	margin-right: 8px;
+}
+
+.editIcon {
+	font-size: 14px;
+	opacity: 0.7;
+}
+
+.inputForm {
+	display: flex;
+	width: 100%;
+	max-width: 400px;
+}
+
+.channelInputField {
+	flex: 1;
+	padding: 8px 12px;
+	border: none;
+	border-radius: 4px 0 0 4px;
+	background-color: #3a3a3a;
+	color: white;
+	font-size: 14px;
+}
+
+.channelInputField:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px rgba(145, 71, 255, 0.5);
+}
+
+.submitButton {
+	padding: 8px 16px;
+	border: none;
+	border-radius: 0 4px 4px 0;
+	background-color: #9147ff;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+	background-color: #772ce8;
+}
+
+/* Tablette */
+@media (max-width: 1024px) {
+	.channelInputContainer {
+		padding: 8px;
+	}
+
+	.inputForm {
+		max-width: 350px;
+	}
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+	.channelDisplay {
+		padding: 6px 10px;
+		font-size: 14px;
+	}
+
+	.channelInputField {
+		padding: 6px 10px;
+		font-size: 13px;
+	}
+
+	.submitButton {
+		padding: 6px 12px;
+		font-size: 13px;
+	}
+
+	.inputForm {
+		max-width: 300px;
+	}
+}
+
+/* Très petit écran */
+@media (max-width: 480px) {
+	.currentChannel {
+		font-size: 13px;
+	}
+
+	.editIcon {
+		font-size: 12px;
+	}
+
+	.inputForm {
+		max-width: 250px;
+	}
+
+	.submitButton {
+		padding: 6px 10px;
+	}
+}

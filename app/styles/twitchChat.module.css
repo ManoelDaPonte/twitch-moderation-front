@@ -1,56 +1,121 @@
 .chatContainer {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-    width: 20vw;
-    height: 90vh;
-    border: 1px solid rgb(80, 80, 80);
-    background-color: #222222;
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+	width: 20vw;
+	height: 90vh;
+	border: 1px solid rgb(80, 80, 80);
+	background-color: #222222;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #333333;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 15px;
-    text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #333333;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 15px;
+	text-transform: uppercase;
 }
 
 .chat {
-    overflow-y: auto; /* Automatically hide scrollbar when not needed */
-    scrollbar-width: thin; /* width of scrollbar */
-    scrollbar-color: rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.1); /* color of scrollbar */
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.1);
+	flex: 1;
+	display: flex;
+	flex-direction: column;
 }
 
 .chatMessage {
-    display: flex;
-    padding: 3px;
-    margin: 5px;
+	display: flex;
+	padding: 3px;
+	margin: 5px;
 }
 
 .chatMessage:hover {
-    display: flex;
-    padding: 3px;
-    margin: 5px;
-
-    background-color: #424242;
-    border-radius: 10px;
-    cursor: pointer;
+	display: flex;
+	padding: 3px;
+	margin: 5px;
+	background-color: #424242;
+	border-radius: 10px;
+	cursor: pointer;
 }
 
 .userName {
-    color: blueviolet;
-    font-weight: bold;
+	color: #9147ff;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 120px;
 }
 
 .point {
-    margin: 0px 5px;
+	margin: 0px 5px;
 }
 
 .message {
-    flex: 1; /* take remaining space */
-    color: white; /* default message color */
+	flex: 1;
+	color: white;
+	word-break: break-word;
+}
+
+.emptyChat {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	color: #888;
+	text-align: center;
+	padding: 20px;
+}
+
+.emptyChat p {
+	margin: 5px 0;
+}
+
+.smallText {
+	font-size: 12px;
+	opacity: 0.7;
+}
+
+/* Tablette */
+@media (max-width: 1024px) {
+	.chatContainer {
+		width: calc(100% - 40px);
+		height: 300px;
+		margin: 20px;
+		margin-bottom: 10px;
+	}
+
+	.userName {
+		max-width: 150px;
+	}
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+	.chatContainer {
+		width: calc(100% - 20px);
+		margin: 10px;
+		height: 250px;
+	}
+
+	.userName {
+		max-width: 100px;
+	}
+
+	.chatMessage {
+		padding: 5px 3px;
+	}
+}
+
+/* Très petit écran */
+@media (max-width: 480px) {
+	.userName {
+		max-width: 80px;
+	}
 }
