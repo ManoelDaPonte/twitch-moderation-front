@@ -62,10 +62,6 @@ npm install
 # ou
 yarn install
 
-# Créer un fichier .env pour la fonctionnalité Text-to-Speech (optionnel)
-echo "NEXT_PUBLIC_ELEVEN_API_KEY=votre_clé_api_elevenlabs" > .env
-echo "NEXT_PUBLIC_ELEVEN_ENDPOINT=votre_endpoint_elevenlabs" >> .env
-
 # Démarrer l'application
 npm run dev
 # ou
