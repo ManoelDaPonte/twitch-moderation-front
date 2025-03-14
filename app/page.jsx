@@ -7,7 +7,7 @@ import React, { useState } from "react";
 export default function Page() {
 	const [lastMessage, setLastMessage] = useState(null);
 	const [messages, setMessages] = useState([]);
-	const [channelName, setChannelName] = useState("mistermv"); // Valeur par défaut
+	const [channelName, setChannelName] = useState("v4ssler"); // Valeur par défaut
 
 	return (
 		<div className={styles.container}>
