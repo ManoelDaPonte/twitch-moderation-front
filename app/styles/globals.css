@@ -1,14 +1,23 @@
 body {
-    font-family: "Gill Sans";
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #161616;
-    color: #f2f2f2;
-    font-size: 14px;
-    line-height: 1.5;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	font-family: "Gill Sans";
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #161616;
+	color: #f2f2f2;
+	font-size: 14px;
+	line-height: 1.5;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow: hidden; /* Empêche le défilement sur le body */
+	height: 100%;
+	width: 100%;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
 }
